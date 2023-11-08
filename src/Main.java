@@ -16,8 +16,8 @@ class Main {
 
     private static String intToRoman(int num) {
 
-        String[] romanNumerals = {"X","V", "IV", "I"};
-        int[] values = { 10, 5, 4, 1};;
+        String[] romanNumerals = {"X","V","I"};
+        int[] values = { 10, 5, 1};;
 
         StringBuilder sb = new StringBuilder();
 
