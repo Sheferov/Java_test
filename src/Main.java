@@ -4,9 +4,16 @@ class Main {
         int ans = 0, num = 0;
         for (int i = s.length()-1; i >= 0; i--) {
             switch (s.charAt(i)) {
-                case 'I': num = 1; break;
-                case 'V': num = 5; break;
-                case 'X': num = 10; break;
+                case 'I': num = 1;
+                break;
+                case 'V': num = 5;
+                break;
+                case 'X': num = 10;
+                break;
+                case 'L': num = 50;
+                break;
+                case 'C': num = 100;
+                break;
             }
             if (4 * num < ans) ans -= num;
             else ans += num;
@@ -16,8 +23,8 @@ class Main {
 
     private static String intToRoman(int num) {
 
-        String[] romanNumerals = {"X","V","I"};
-        int[] values = { 10, 5, 1};;
+        String[] romanNumerals = {"C","L","X","V","I"};
+        int[] values = {100,50,10, 5, 1};;
 
         StringBuilder sb = new StringBuilder();
 
@@ -34,7 +41,7 @@ class Main {
         return sb.toString();
     }
     private static boolean isRomanNumeral(String num) {
-        return num.matches("[IVXLCDM]+");
+        return num.matches("[IVXLC]+");
     }
 
     public static String calc(String input) {
