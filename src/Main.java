@@ -23,11 +23,10 @@ class Main {
 
     private static String intToRoman(int num) {
 
-        String[] romanNumerals = {"C","L","X","V","I"};
-        int[] values = {100,50,10, 5, 1};;
+        String[] romanNumerals = {"C","XC","L","XL","X","IX","V","IV","I"};
+        int[] values = {100,90,50,40,10,9,5,4,1};;
 
         StringBuilder sb = new StringBuilder();
-
         int i = 0;
 
         while (num > 0) {
